@@ -753,3 +753,287 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOVO | Inspire • Build • Lead</title>
+
+  <style>
+    :root {
+      --primary:#6366f1;
+      --secondary:#22d3ee;
+      --accent:#f59e0b;
+      --bg-dark:#020617;
+      --bg-card:#0f172a;
+      --text-main:#e5e7eb;
+      --text-soft:#cbd5f5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      color: var(--text-main);
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(2,6,23,0.8);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--secondary);
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg,var(--primary),var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: var(--text-main);
+      text-decoration: none;
+      margin-left: 28px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      transition: 0.3s;
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    /* HERO */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 140px 20px 80px;
+      text-align: center;
+    }
+
+    .hero {
+      max-width: 900px;
+      animation: fadeUp 1.5s ease;
+    }
+
+    .hero h1 {
+      font-size: 4.2rem;
+      background: linear-gradient(135deg,var(--secondary),var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-weight: 400;
+      color: var(--text-soft);
+      margin-bottom: 35px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg,var(--primary),var(--secondary));
+      color: white;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      color: var(--secondary);
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--text-soft);
+      margin-bottom: 60px;
+      font-size: 1.1rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: linear-gradient(180deg,#0f172a,#020617);
+      border-radius: 22px;
+      padding: 35px 30px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform .4s;
+    }
+
+    .card:hover { transform: translateY(-10px); }
+
+    .card h3 { color: var(--accent); margin-top: 0; }
+
+    /* QUOTES */
+    .quote {
+      font-style: italic;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    .author {
+      margin-top: 10px;
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(30px); }
+      to { opacity:1; transform: translateY(0); }
+    }
+
+    @media(max-width:600px){
+      .hero h1 { font-size: 3rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="brand">
+    <div class="logo">H</div> HOVO
+  </div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#quotes">Quotes</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="hero">
+    <div class="badge">CEO & Founder • Hirendravaasan C</div>
+    <h1>HOVO</h1>
+    <h2>Inspiring Vision • Purpose • Discipline</h2>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="title">About Us</div>
+    <div class="subtitle">A vision-driven platform for focused minds</div>
+    <div class="cards">
+      <div class="card">
+        <h3>Who We Are</h3>
+        <p>HOVO is built on the belief that discipline, clarity, and consistency create extraordinary success.</p>
+      </div>
+      <div class="card">
+        <h3>Our Vision</h3>
+        <p>To inspire young minds to dream big, work hard, and lead with integrity.</p>
+      </div>
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>To empower focus, remove distractions, and promote growth through simplicity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quotes">
+  <div class="container">
+    <div class="title">Words That Inspire</div>
+    <div class="subtitle">Timeless wisdom from great leaders</div>
+    <div class="cards">
+      <div class="card">
+        <div class="quote">“Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.”</div>
+        <div class="author">— Dr. A. P. J. Abdul Kalam</div>
+      </div>
+      <div class="card">
+        <div class="quote">“If you want to shine like a sun, first burn like a sun.”</div>
+        <div class="author">— Dr. A. P. J. Abdul Kalam</div>
+      </div>
+      <div class="card">
+        <div class="quote">“Be the change that you wish to see in the world.”</div>
+        <div class="author">— Mahatma Gandhi</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="title">Contact</div>
+    <div class="subtitle">Connect with HOVO</div>
+    <div class="cards">
+      <div class="card">
+        <h3>Email</h3>
+        <p>contact@hovo.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 HOVO.com • Built with Vision
+</footer>
+
+</body>
+</html>
